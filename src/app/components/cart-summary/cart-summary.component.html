@@ -5,7 +5,9 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a *ngFor= "let cartItem of cartItems" class="dropdown-item">
              <span class="badge bg-secondary">{{cartItem.quantity}}</span>
-             {{cartItem.product.productName}}</a></li>
+             {{cartItem.product.productName}}
+             <span (click)="removeFromCart(cartItem.product)" class="badge bg-secondary">Sil</span>
+             </a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Sepete git</a></li>
           </ul>
